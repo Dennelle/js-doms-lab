@@ -46,17 +46,28 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 
 // Task 2.3
 // Add a class of flex-around to topMenuEl.
-topMenuEl.classList.add('flex-round')
+topMenuEl.classList.add('flex-around')
 
 // Task 3.1
 // Iterate over the entire menuLinks array and for each "link" object:
 // Create an <a> element.
 
-menuLinks.forEach((link) => console.log(link));
-
+// const menuLinks = [
+//   {text: 'about', href: '/about'},
+//   {text: 'catalog', href: '/catalog'},
+//   {text: 'orders', href: '/orders'},
+//   {text: 'account', href: '/account'},
+// ];
 
 // On the new element, add an href attribute with its value set to the href property of the "link" object.
 
-// Set the new element's content to the value of the text property of the "link" object.
-
-// Append the new element to the topMenuEl element.
+menuLinks.forEach(function (link) {
+  let anchorEl = document.createElement('a');
+  anchorEl.textContent = link.text;
+  anchorEl.setAttribute('href', link.href);
+  // Set the new element's content to the value of the text property of the "link" object.
+  console.log(anchorEl)
+ // Append the new element to the topMenuEl element.
+topMenuEl.append(anchorEl);
+console.log(topMenuEl)
+  });
