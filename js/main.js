@@ -1,3 +1,11 @@
+// Task 3.0 Copy the following data structure to the top of script.js:
+const menuLinks = [
+    {text: 'about', href: '/about'},
+    {text: 'catalog', href: '/catalog'},
+    {text: 'orders', href: '/orders'},
+    {text: 'account', href: '/account'},
+  ];
+
 //Task 1.0 Select and cache the <main> element in a variable named mainEl.
 const mainEl = document.querySelector("main")
 //console.log(mainEl)
@@ -39,3 +47,16 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 // Task 2.3
 // Add a class of flex-around to topMenuEl.
 topMenuEl.classList.add('flex-round')
+
+// Task 3.1
+// Iterate over the entire menuLinks array and for each "link" object:
+// Create an <a> element.
+
+menuLinks.forEach((link) => console.log(link));
+
+
+// On the new element, add an href attribute with its value set to the href property of the "link" object.
+
+// Set the new element's content to the value of the text property of the "link" object.
+
+// Append the new element to the topMenuEl element.
